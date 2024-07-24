@@ -7,7 +7,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(title),
+      title: Text(title.toUpperCase(), style: const TextStyle(letterSpacing: 5)),
       centerTitle: true,
     );
   }
