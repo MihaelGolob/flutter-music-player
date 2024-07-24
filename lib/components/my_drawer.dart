@@ -9,11 +9,12 @@ class MyDrawer extends StatelessWidget {
       backgroundColor: Theme.of(context).colorScheme.surface,
       child: Column(
         children: [
-          DrawerHeader(
+          Container(
+            margin: const EdgeInsets.only(top: 100, bottom: 25),
             child: Center(
               child: Icon(
                 Icons.music_note,
-                size: 50,
+                size: 70,
                 color: Theme.of(context).colorScheme.inversePrimary,
               ),
             ),
@@ -25,14 +26,14 @@ class MyDrawer extends StatelessWidget {
                 'HOME',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Theme.of(context).colorScheme.primary,
+                  color: Theme.of(context).colorScheme.inversePrimary,
                   fontSize: 18,
                   letterSpacing: 10,
                 ),
               ),
               leading: Icon(
                 Icons.home,
-                color: Theme.of(context).colorScheme.primary,
+                color: Theme.of(context).colorScheme.inversePrimary,
               ),
               onTap: () => Navigator.pop(context),
             ),
@@ -44,18 +45,18 @@ class MyDrawer extends StatelessWidget {
                 'SETTINGS',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Theme.of(context).colorScheme.primary,
+                  color: Theme.of(context).colorScheme.inversePrimary,
                   fontSize: 18,
                   letterSpacing: 10,
                 ),
               ),
               leading: Icon(
                 Icons.settings,
-                color: Theme.of(context).colorScheme.primary,
+                color: Theme.of(context).colorScheme.inversePrimary,
               ),
               onTap: () {
                 Navigator.pop(context);
-                Navigator.pushNamed(context, '/settings'); // todo: add routes 
+                Navigator.pushNamed(context, '/settings'); // todo: add routes
               },
             ),
           ),
